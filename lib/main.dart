@@ -65,7 +65,38 @@ class MyHomePage extends StatelessWidget {
                     Container(
                       width: 340,
                       height: 50,
-                      color: Colors.purple,
+                      decoration: BoxDecoration(
+                        color: Colors.purple, // Adjust color to match your design
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            child: Text(
+                              "Donation Amount [Default: 50 QAR]",
+                              style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis, // Prevents overflow
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Container(
+                            width: 140,
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: const Text(
+                              "Input Desired Amount QAR",
+                              style: TextStyle(color: Colors.white70, fontSize: 14),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(height: 20), // Add some space between the buttons
                     Container(
