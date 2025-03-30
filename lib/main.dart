@@ -76,14 +76,15 @@ class MyHomePage extends StatelessWidget {
                           Expanded(
                             child: Text(
                               "Donation Amount [Default: 50 QAR]",
-                              style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                              style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis, // Prevents overflow
+                              textAlign: TextAlign.center, // Center-align the text
                             ),
                           ),
                           const SizedBox(width: 10),
                           Container(
-                            width: 140,
+                            width: 120,
                             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.white),
@@ -102,7 +103,28 @@ class MyHomePage extends StatelessWidget {
                     Container(
                       width: 340,
                       height: 50,
-                      color: Colors.purple,
+                      decoration: BoxDecoration(
+                        color: Colors.purple, // Adjust color to match your design
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Add to Cart",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(width: 80), // Add some space between the text and the icon
+                          Icon(
+                            Icons.shopping_cart,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
