@@ -76,9 +76,7 @@ class MyHomePage extends StatelessWidget {
                           Expanded(
                             child: Text(
                               "Donation Amount [Default: 50 QAR]",
-                              style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis, // Prevents overflow
+                              style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
                               textAlign: TextAlign.center, // Center-align the text
                             ),
                           ),
@@ -122,6 +120,7 @@ class MyHomePage extends StatelessWidget {
                           Icon(
                             Icons.shopping_cart,
                             color: Colors.white,
+                            size: 26,
                           ),
                         ],
                       ),
