@@ -76,55 +76,80 @@ class MyHomePage extends StatelessWidget {
                           Expanded(
                             child: Text(
                               "Donation Amount [Default: 50 QAR]",
-                              style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
+                                height: 24 / 14, // Line height set to 24 (calculated as line height / font size)
+                                letterSpacing: 1.68, // Letter spacing set to 1.68
+                              ),
                               textAlign: TextAlign.center, // Center-align the text
-                            ),
+                            ),                            
                           ),
                           const SizedBox(width: 10),
                           Container(
-                            width: 120,
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                            width: 150, // Ensures enough space for two lines
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.white),
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            child: const Text(
-                              "Input Desired Amount QAR",
-                              style: TextStyle(color: Colors.white70, fontSize: 14),
+                            child: TextField(
+                              keyboardType: TextInputType.number,
+                              style: TextStyle(color: Colors.white70, fontSize: 19),
                               textAlign: TextAlign.center,
+                              textAlignVertical: TextAlignVertical.center, // Keeps cursor centered
+                              maxLines: 2, // Allows placeholder to show on two lines
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Input Desired Amount QAR", // Forces two-line display
+                                hintStyle: TextStyle(color: Colors.white70, fontSize: 13),
+                                contentPadding: EdgeInsets.symmetric(vertical: 4, horizontal: 5), // Adjust for better alignment
+                              ),
                             ),
                           ),
                         ],
                       ),
                     ),
                     SizedBox(height: 20), // Add some space between the buttons
-                    Container(
-                      width: 340,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: Colors.purple, // Adjust color to match your design
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Add to Cart",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
+                    GestureDetector(
+                      onTap: () {
+                        // Add to cart logic here
+                      },
+                      child: Semantics(
+                        label: 'Add to cart',
+                        button: true,
+                        child: Container(
+                          width: 340,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            color: Colors.purple,
+                            borderRadius: BorderRadius.circular(8),
                           ),
-                          SizedBox(width: 80), // Add some space between the text and the icon
-                          Icon(
-                            Icons.shopping_cart,
-                            color: Colors.white,
-                            size: 26,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Add to Cart",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1.4,
+                                  letterSpacing: -0.02 * 16,
+                                ),
+                              ),
+                              SizedBox(width: 80),
+                              Icon(
+                                Icons.shopping_cart,
+                                color: Colors.white,
+                                size: 26,
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
-                    ),
+                    )
                   ],
                 ),
               ],
