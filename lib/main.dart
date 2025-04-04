@@ -77,34 +77,46 @@ class MyHomePage extends StatelessWidget {
                             child: Text(
                               "Donation Amount [Default: 50 QAR]",
                               style: TextStyle(
+                                fontFamily: 'InriaSans',
                                 color: Colors.white,
-                                fontSize: 13,
+                                fontSize: 12,
                                 fontWeight: FontWeight.bold,
-                                height: 24 / 14, // Line height set to 24 (calculated as line height / font size)
-                                letterSpacing: 1.68, // Letter spacing set to 1.68
+                                height: 1.5,
+                                letterSpacing: 0.12 * 12,
+                                wordSpacing: 0.16 * 12,
                               ),
-                              textAlign: TextAlign.center, // Center-align the text
-                            ),                            
+                              textAlign: TextAlign.center,
+                            ),
                           ),
                           const SizedBox(width: 10),
-                          Container(
-                            width: 150, // Ensures enough space for two lines
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: TextField(
-                              keyboardType: TextInputType.number,
-                              style: TextStyle(color: Colors.white70, fontSize: 19),
-                              textAlign: TextAlign.center,
-                              textAlignVertical: TextAlignVertical.center, // Keeps cursor centered
-                              maxLines: 2, // Allows placeholder to show on two lines
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: "Input Desired Amount QAR", // Forces two-line display
-                                hintStyle: TextStyle(color: Colors.white70, fontSize: 13),
-                                contentPadding: EdgeInsets.symmetric(vertical: 4, horizontal: 5), // Adjust for better alignment
+                          Semantics(
+                            label: 'Donation Amount input field. Default is 50 QAR. Enter desired amount in QAR.',
+                            textField: true,
+                            child: Container(
+                              width: 150,
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.white),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: TextField(
+                                keyboardType: TextInputType.number,
+                                style: TextStyle(color: Colors.white70, fontSize: 19),
+                                textAlign: TextAlign.center,
+                                textAlignVertical: TextAlignVertical.center,
+                                maxLines: 2,
+                                decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  hintText: "Input Desired Amount QAR",
+                                  hintStyle: TextStyle(
+                                    color: Colors.white70,
+                                    fontSize: 13,
+                                    height: 1.5,
+                                    letterSpacing: 0.12 * 13,
+                                    wordSpacing: 0.16 * 13,
+                                  ),
+                                  contentPadding: EdgeInsets.symmetric(vertical: 4, horizontal: 5),
+                                ),
                               ),
                             ),
                           ),
@@ -132,11 +144,13 @@ class MyHomePage extends StatelessWidget {
                               Text(
                                 "Add to Cart",
                                 style: TextStyle(
+                                  fontFamily: 'InriaSans',
                                   color: Colors.white,
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
-                                  height: 1.4,
-                                  letterSpacing: -0.02 * 16,
+                                  height: 1.5,
+                                  letterSpacing: 1.92,
+                                  wordSpacing: 2.56,
                                 ),
                               ),
                               SizedBox(width: 80),
