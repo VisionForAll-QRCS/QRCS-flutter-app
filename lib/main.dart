@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //builder: (context, child) => AccessibilityTools(child: child),
+      builder: (context, child) => AccessibilityTools(child: child),
       home: MyHomePage(),
     );
   }
