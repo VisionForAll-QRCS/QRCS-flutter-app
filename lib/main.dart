@@ -46,9 +46,9 @@ class MyHomePage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset(
-                              'assets/image1.png', // Path to your image
+                              'assets/icon-1.png', // Path to your image
                               width: 30, // Adjust the width of the image
-                              height: 30, // Adjust the height of the image
+                              height: 25, // Adjust the height of the image
                             ),
                             Spacer(),
                             Text(
@@ -87,6 +87,11 @@ class MyHomePage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            Image.asset(
+                              'assets/icon-2.png', // Path to your image
+                              width: 30, // Adjust the width of the image
+                              height: 27, // Adjust the height of the image
+                            ),
                             Spacer(),
                             Text(
                               'Beneficiaries',
@@ -124,6 +129,11 @@ class MyHomePage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            Image.asset(
+                              'assets/icon-3.png', // Path to your image
+                              width: 30, // Adjust the width of the image
+                              height: 25, // Adjust the height of the image
+                            ),
                             Spacer(),
                             Text(
                               'Goal   7,000,000 QAR',

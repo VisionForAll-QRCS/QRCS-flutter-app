@@ -60,6 +60,9 @@ flutter:
  
   assets:
      - assets/plantCoins.jpg
+     - assets/icon-1.png
+     - assets/icon-2.png
+     - assets/icon-3.png
   # To add assets to your application, add an assets section, like this:
 
   # assets:
