@@ -77,7 +77,7 @@ class MyHomePage extends StatelessWidget {
                             child: Text(
                               "Donation Amount [Default: 50 QAR]",
                               style: TextStyle(
-                                fontFamily: 'InriaSans',
+                                fontFamily: 'Intersans',
                                 color: Colors.white,
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
@@ -144,7 +144,7 @@ class MyHomePage extends StatelessWidget {
                               Text(
                                 "Add to Cart",
                                 style: TextStyle(
-                                  fontFamily: 'InriaSans',
+                                  fontFamily: 'Intersans',
                                   color: Colors.white,
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
