@@ -63,6 +63,10 @@ flutter:
     - assets/plantCoins.jpg
     #   - images/a_dot_ham.jpeg
 
+  fonts:
+    - family: Intersans
+      fonts:
+        - asset: assets/fonts/Intersans-bold.otf
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
