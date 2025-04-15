@@ -32,130 +32,139 @@ class MyHomePage extends StatelessWidget {
                         Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      width: 70,
-                      height: 77,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFA03123),
-                        borderRadius: BorderRadius.circular(10), // Curved edges
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(6.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              'assets/icon-1.png', // Path to your image
-                              width: 30, // Adjust the width of the image
-                              height: 25, // Adjust the height of the image
-                            ),
-                            Spacer(),
-                            Text(
-                              'Expiring',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Sans Serif',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 13,
-                              ),
-                            ),
-                            Text(
-                              '784 days',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Sans Serif',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ],
+                    Semantics(
+                      label: 'This project will be expiring in 784 days',
+                      child: Container(
+                        width: 70,
+                        height: 77,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFA03123),
+                          borderRadius: BorderRadius.circular(10), // Curved edges
                         ),
-                      )
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset(
+                                'assets/icon-1.png', // Path to your image
+                                width: 30, // Adjust the width of the image
+                                height: 25, // Adjust the height of the image
+                              ),
+                              Spacer(),
+                              Text(
+                                'Expiring',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: 'Sans Serif',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13,
+                                ),
+                              ),
+                              Text(
+                                '784 days',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: 'Sans Serif',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ),
                     ),
                     SizedBox(width: 15), // Add some space between the buttons                    
-                    Container(
-                      width: 105,
-                      height: 77,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFA03123),
-                        borderRadius: BorderRadius.circular(10), // Curved edges
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(6.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              'assets/icon-2.png', // Path to your image
-                              width: 30, // Adjust the width of the image
-                              height: 27, // Adjust the height of the image
-                            ),
-                            Spacer(),
-                            Text(
-                              'Beneficiaries',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Sans Serif',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 13,
-                              ),
-                            ),
-                            Text(
-                              '70,000',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Sans Serif',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ],
+                    Semantics(
+                      label: 'This project has 70,000 beneficiaries',
+                      child: Container(
+                        width: 105,
+                        height: 77,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFA03123),
+                          borderRadius: BorderRadius.circular(10), // Curved edges
                         ),
-                      )
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset(
+                                'assets/icon-2.png', // Path to your image
+                                width: 30, // Adjust the width of the image
+                                height: 27, // Adjust the height of the image
+                              ),
+                              Spacer(),
+                              Text(
+                                'Beneficiaries',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: 'Sans Serif',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13,
+                                ),
+                              ),
+                              Text(
+                                '70,000',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: 'Sans Serif',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ),
                     ),
                     SizedBox(width: 15), // Add some space between the buttons
-                    Container(
-                      width: 145,
-                      height: 77,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFA03123),
-                        borderRadius: BorderRadius.circular(10), // Curved edges
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(6.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              'assets/icon-3.png', // Path to your image
-                              width: 30, // Adjust the width of the image
-                              height: 25, // Adjust the height of the image
-                            ),
-                            Spacer(),
-                            Text(
-                              'Goal   7,000,000 QAR',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Sans Serif',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 12,
-                              ),
-                            ),
-                            Text(
-                              'Raised 6,112,811QAR',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Sans Serif',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ],
+                    Semantics(
+                      label: 'This project has a goal of 7,000,000 QAR and has raised 6,112,811 QAR',
+                      child: Container(
+                        width: 145,
+                        height: 77,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFA03123),
+                          borderRadius: BorderRadius.circular(10), // Curved edges
                         ),
-                      )
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset(
+                                'assets/icon-3.png', // Path to your image
+                                width: 30, // Adjust the width of the image
+                                height: 25, // Adjust the height of the image
+                              ),
+                              Spacer(),
+                              Text(
+                                'Goal   7,000,000 QAR',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: 'Sans Serif',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                ),
+                              ),
+                              Text(
+                                'Raised 6,112,811QAR',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: 'Sans Serif',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ),
                     ),
                   ],
                 ),
