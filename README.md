@@ -4,7 +4,7 @@ This repository contains the final deliverables for the Qatar Red Crescent Socie
 
 ---
 
-## 🔧 Project Overview
+## Project Overview
 
 - **Client:** Qatar Red Crescent Society (QRCS)  
 - **Consulting Team:** Al Anoud Al Khulaifi, Fatima Al-Haddad, Deema Al-Mohanadi  
@@ -14,12 +14,12 @@ This repository contains the final deliverables for the Qatar Red Crescent Socie
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 QRCS_Accessibility_Prototype/ │ ├── prototype_app/ # Flutter iOS application code │ ├── lib/ │ ├── assets/ │ ├── pubspec.yaml │ └── README.md (this file) │ ├── wireframes/ # Annotated wireframes with accessibility notes │ └── figma_wireframes.pdf │ ├── user_testing/ # User testing protocol, results, and sign-off │ ├── test_protocol.pdf │ ├── results_summary.xlsx │ └── signoff_form_scanned.pdf │ ├── sprint_docs/ # Sprint reports and client meeting notes │ ├── sprint1.pdf │ ├── sprint2.pdf │ └── ... │ ├── training/ # User training material for future devs │ ├── accessibility_guide.pdf │ └── prototype_manual.pdf │ ├── statement_of_completion/ # Signed confirmation of project delivery │ └── QRCS_signed_completion.pdf │ └── final_report/ # Final project report submitted to faculty └── QRCS_Final_Report_2025.pdf
 
 ---
 
-## 🚀 Running the Prototype
+## Running the Prototype
 
 > **Note:** This app is designed for iOS and optimized for use with VoiceOver.
 
@@ -65,7 +65,7 @@ Focus on areas like:
 - Add to cart and donation confirmation flow
 
 Testing Artifacts
-Located in /testing_report/:
+Located in docs/testing/:
 
 handover_manual.pdf – Step-by-step testing tasks and procedures
 
@@ -76,15 +76,15 @@ signoff_form.pdf – Final validation form signed by the client
 Navigation Tips for QRCS Team
 If you're viewing this repository on Google Drive or GitHub:
 
-- Need wireframes? Go to /wireframes/figma_wireframes.png
+- Need wireframes? Go to docs/Wireframes/
 
-- Want the final report? Check /final_report/QRCS_Final_Report_2025.pdf
+- Want the final report? Check docs/final_report/QRCS_Final_Report_2025.pdf
 
-- Training material for developers? Look under /training/
+- Training material for developers? Look under docs/training/
 
-Project progress and collaboration logs? View /sprint_reports/
+Project progress and collaboration logs? View docs/sprint_reports/
 
-📩 Contact
+Contact
 For any questions about this prototype or for future improvements, please reach out to the student consultants:
 
 Deema Al-Mohanadi at dmohanad@andrew.cmu.edu
