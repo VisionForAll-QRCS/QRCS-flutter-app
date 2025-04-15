@@ -55,7 +55,7 @@ class MyHomePage extends StatelessWidget {
                               'Expiring',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontFamily: 'Inter',
+                                fontFamily: 'Sans Serif',
                                 fontWeight: FontWeight.bold,
                                 fontSize: 13,
                               ),
@@ -64,7 +64,7 @@ class MyHomePage extends StatelessWidget {
                               '784 days',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontFamily: 'Inter',
+                                fontFamily: 'Sans Serif',
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12,
                               ),
@@ -97,7 +97,7 @@ class MyHomePage extends StatelessWidget {
                               'Beneficiaries',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontFamily: 'Inter',
+                                fontFamily: 'Sans Serif',
                                 fontWeight: FontWeight.bold,
                                 fontSize: 13,
                               ),
@@ -106,7 +106,7 @@ class MyHomePage extends StatelessWidget {
                               '70,000',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontFamily: 'Inter',
+                                fontFamily: 'Sans Serif',
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12,
                               ),
@@ -139,7 +139,7 @@ class MyHomePage extends StatelessWidget {
                               'Goal   7,000,000 QAR',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontFamily: 'Inter',
+                                fontFamily: 'Sans Serif',
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12,
                               ),
@@ -148,7 +148,7 @@ class MyHomePage extends StatelessWidget {
                               'Raised 6,112,811QAR',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontFamily: 'Inter',
+                                fontFamily: 'Sans Serif',
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12,
                               ),
