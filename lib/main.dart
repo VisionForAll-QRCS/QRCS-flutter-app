@@ -1,7 +1,7 @@
 // filepath: /Users/alanoudalkhulaifi/Downloads/QRCS-App/prototype_app/lib/main.dart
 import 'package:flutter/material.dart';
 import 'package:accessibility_tools/accessibility_tools.dart';
-
+import 'package:flutter/semantics.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,13 +11,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      builder: (context, child) => AccessibilityTools(child: child),
+      //builder: (context, child) => AccessibilityTools(child: child),
       home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
+  final TextEditingController _controller = TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -117,6 +120,24 @@ class MyHomePage extends StatelessWidget {
                                   ),
                                   contentPadding: EdgeInsets.symmetric(vertical: 4, horizontal: 5),
                                 ),
+                                onChanged: (value) {
+                                  // Validate the input
+                                  String semanticLabel = "Default label"; // Initialize with a default value
+                                  if (value.isEmpty) {
+                                    semanticLabel = "Input is required.";
+                                  } else if (double.tryParse(value) == null) {
+                                    semanticLabel = "Invalid input. Please enter a number.";
+                                  } else {
+                                    double amount = double.parse(value);
+                                    if (amount <= 0) {
+                                      semanticLabel = "Minimum donation amount is 1 QAR.";
+                                    } else {
+                                      semanticLabel = "You have entered $value QAR.";
+                                    }
+                                  }
+                                  // Update the semantic label dynamically
+                                  SemanticsService.announce(semanticLabel, TextDirection.ltr);
+                                },
                               ),
                             ),
                           ),
