@@ -15,9 +15,9 @@ This repository contains the final deliverables for the Qatar Red Crescent Socie
 ---
 
 ## Repository Structure
-[QRCS_Accessibility_Prototype main files:]
+QRCS_Accessibility_Prototype main files:
 lib/ | assets/ │ pubspec.yaml │ README.md (this file)
-[Essential Documents Located Under Folder docs/]
+Essential Documents Located Under Folder docs/
 wireframes/ 
 testing/
 sprint_reports/ 
