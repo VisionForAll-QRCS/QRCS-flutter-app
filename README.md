@@ -41,24 +41,15 @@ handover_manual/
 1. Clone the repository:
    ```bash
    git clone https://github.com/VisionForAll-QRCS/QRCS-flutter-app.git
+
 Navigate into the prototype folder:
+   cd prototype_app
 
-bash
-Copy
-Edit
-cd prototype_app
 Install dependencies:
+   flutter pub get
 
-bash
-Copy
-Edit
-flutter pub get
 Run on iOS simulator:
-
-bash
-Copy
-Edit
-flutter run
+   flutter run
 VoiceOver Testing
 
 To simulate the experience for visually impaired users:
