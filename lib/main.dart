@@ -222,45 +222,75 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 20,
+            top: 50,
             right: 20,
             child: Row(
               children: [
-                // Added grey circular background to the shopping cart icon
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    shape: BoxShape.circle,
+                // Shopping cart icon
+                Semantics(
+                  label: 'Shopping cart',
+                  button: true,
+                  child: Container(
+                    width: 48,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: Colors.grey, // Grey circular background
+                      shape: BoxShape.circle,
+                    ),
+                    child: IconButton(
+                      icon: Icon(Icons.shopping_cart, size: 35, color: Colors.black), // IconButton inside the circle
+                      tooltip: 'Shopping cart', // Tooltip for accessibility
+                      onPressed: () {
+                        // Add shopping cart logic here
+                      },
+                    ),
                   ),
-                  child: Icon(Icons.shopping_cart, size: 50),
                 ),
                 SizedBox(width: 20), // Add some space between the icons
-                // Added grey circular background to the menu icon
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    shape: BoxShape.circle,
+                // Menu icon
+                Semantics(
+                  label: 'Menu',
+                  button: true,
+                  child: Container(
+                    width: 48,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: Colors.grey, // Grey circular background
+                      shape: BoxShape.circle,
+                    ),
+                    child: IconButton(
+                      icon: Icon(Icons.menu, size: 35, color: Colors.black), // IconButton inside the circle
+                      tooltip: 'Menu', // Tooltip for accessibility
+                      onPressed: () {
+                        // Add menu logic here
+                      },
+                    ),
                   ),
-                  child: Icon(Icons.menu, size: 50),
                 ),
               ],
             ),
           ),
-                    // Added back button with grey circular background
+          // Back icon
           Positioned(
-            top: 20,
+            top: 50,
             left: 20,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.grey,
-                shape: BoxShape.circle,
-              ),
-              child: IconButton(
-                icon: Icon(Icons.arrow_back, size: 50),
-                onPressed: () {
-                  // Add your back button functionality here
-                  Navigator.pop(context);
-                },
+            child: Semantics(
+              label: 'Back button',
+              button: true,
+              child: Container(
+                width: 48,
+                height: 48,
+                decoration: BoxDecoration(
+                  color: Colors.grey, // Grey circular background
+                  shape: BoxShape.circle,
+                ),
+                child: IconButton(
+                  icon: Icon(Icons.arrow_back, size: 35, color: Colors.black), // IconButton inside the circle
+                  tooltip: 'Back button', // Tooltip for accessibility
+                  onPressed: () {
+                    // Add back button logic here
+                  },
+                ),
               ),
             ),
           ),
