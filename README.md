@@ -15,7 +15,14 @@ This repository contains the final deliverables for the Qatar Red Crescent Socie
 ---
 
 ## Repository Structure
-QRCS_Accessibility_Prototype/ │ ├── prototype_app/ # Flutter iOS application code │ ├── lib/ │ ├── assets/ │ ├── pubspec.yaml │ └── README.md (this file) │ ├── wireframes/ # Annotated wireframes with accessibility notes │ └── figma_wireframes.pdf │ ├── user_testing/ # User testing protocol, results, and sign-off │ ├── test_protocol.pdf │ ├── results_summary.xlsx │ └── signoff_form_scanned.pdf │ ├── sprint_docs/ # Sprint reports and client meeting notes │ ├── sprint1.pdf │ ├── sprint2.pdf │ └── ... │ ├── training/ # User training material for future devs │ ├── accessibility_guide.pdf │ └── prototype_manual.pdf │ ├── statement_of_completion/ # Signed confirmation of project delivery │ └── QRCS_signed_completion.pdf │ └── final_report/ # Final project report submitted to faculty └── QRCS_Final_Report_2025.pdf
+[QRCS_Accessibility_Prototype main files:]
+lib/ | assets/ │ pubspec.yaml │ README.md (this file)
+[Essential Documents Located Under Folder docs/]
+wireframes/ 
+testing/
+sprint_reports/ 
+training/ 
+handover_manual/ 
 
 ---
 
@@ -33,7 +40,7 @@ QRCS_Accessibility_Prototype/ │ ├── prototype_app/ # Flutter iOS applica
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YourUsername/QRCS_Accessibility_Prototype.git
+   git clone https://github.com/VisionForAll-QRCS/QRCS-flutter-app.git
 Navigate into the prototype folder:
 
 bash
@@ -78,11 +85,9 @@ If you're viewing this repository on Google Drive or GitHub:
 
 - Need wireframes? Go to docs/Wireframes/
 
-- Want the final report? Check docs/final_report/QRCS_Final_Report_2025.pdf
-
 - Training material for developers? Look under docs/training/
 
-Project progress and collaboration logs? View docs/sprint_reports/
+- Project progress and collaboration logs? View docs/sprint_reports/
 
 Contact
 For any questions about this prototype or for future improvements, please reach out to the student consultants:
