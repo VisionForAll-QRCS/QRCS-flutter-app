@@ -11,14 +11,40 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //builder: (context, child) => AccessibilityTools(child: child),
+      builder: (context, child) => AccessibilityTools(
+        minimumTapAreas: MinimumTapAreas.material, // Set to null to disable tap area checking
+        checkSemanticLabels: true, // Check for semantic labels
+        checkFontOverflows: true, // Check for flex overflows
+        checkImageLabels: true, // Check for image labels
+        logLevel: LogLevel.verbose, // Set how much info about issues is printed
+        buttonsAlignment: ButtonsAlignment.bottomRight, // Set where the buttons are placed
+        enableButtonsDrag: true, // Enable or disable dragging the buttons around
+        testingToolsConfiguration: TestingToolsConfiguration( // Customize testing tools configuration
+          enabled: true,
+          minTextScale: 1.0,
+          maxTextScale: 2.0,
+        ),
+        child: child, // Pass the child widget
+      ),
       home: MyHomePage(),
     );
   }
 }
 
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       builder: (context, child) => AccessibilityTools(child: child),
+//       home: MyHomePage(),
+//     );
+//   }
+// }
+
+
 class MyHomePage extends StatelessWidget {
-  final TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController(text: "50");
 
 
   @override
@@ -69,7 +95,7 @@ class MyHomePage extends StatelessWidget {
                       width: 340,
                       height: 50,
                       decoration: BoxDecoration(
-                        color: Colors.purple, // Adjust color to match your design
+                        color: Color(0xFF5C315E), // Adjust color to match your design
                         borderRadius: BorderRadius.circular(8),
                       ),
                       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -78,7 +104,7 @@ class MyHomePage extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              "Donation Amount [Default: 50 QAR]",
+                              "Donation Amount Default: 50 QAR",
                               style: TextStyle(
                                 fontFamily: 'Intersans',
                                 color: Colors.white,
@@ -95,49 +121,60 @@ class MyHomePage extends StatelessWidget {
                           Semantics(
                             label: 'Donation Amount input field. Default is 50 QAR. Enter desired amount in QAR.',
                             textField: true,
+                            excludeSemantics: true, // ensures your label overrides the built-in one
                             child: Container(
-                              width: 150,
-                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                              width: 180, // Adjust width as needed
+                              height: 52, // Ensure minimum height of 48 pixels
+                              padding: EdgeInsets.zero, // Remove extra padding
                               decoration: BoxDecoration(
                                 border: Border.all(color: Colors.white),
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: TextField(
-                                keyboardType: TextInputType.number,
-                                style: TextStyle(color: Colors.white70, fontSize: 19),
-                                textAlign: TextAlign.center,
-                                textAlignVertical: TextAlignVertical.center,
-                                maxLines: 2,
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  hintText: "Input Desired Amount QAR",
-                                  hintStyle: TextStyle(
+                              child: Center( // Ensures the TextField is vertically centered
+                                child: TextField(
+                                  controller: _controller,
+                                  keyboardType: TextInputType.number,
+                                  style: TextStyle(
                                     color: Colors.white70,
-                                    fontSize: 13,
-                                    height: 1.5,
-                                    letterSpacing: 0.12 * 13,
-                                    wordSpacing: 0.16 * 13,
+                                    fontSize: 19,
+                                    height: 1.5, // Line height set to 1.5x13
+                                    letterSpacing: 0.12 * 13, // Letter spacing set to 0.12x13
+                                    wordSpacing: 0.16 * 13, // Word spacing set to 0.16x13
                                   ),
-                                  contentPadding: EdgeInsets.symmetric(vertical: 4, horizontal: 5),
-                                ),
-                                onChanged: (value) {
-                                  // Validate the input
-                                  String semanticLabel = "Default label"; // Initialize with a default value
-                                  if (value.isEmpty) {
-                                    semanticLabel = "Input is required.";
-                                  } else if (double.tryParse(value) == null) {
-                                    semanticLabel = "Invalid input. Please enter a number.";
-                                  } else {
-                                    double amount = double.parse(value);
-                                    if (amount <= 0) {
-                                      semanticLabel = "Minimum donation amount is 1 QAR.";
+                                  textAlign: TextAlign.center,
+                                  textAlignVertical: TextAlignVertical.center,
+                                  maxLines: 2,
+                                  decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: "Input Desired Amount QAR", // Keep the hint text for guidance
+                                    hintStyle: TextStyle(
+                                      color: Colors.white70,
+                                      fontSize: 13,
+                                      height: 1.5, // Line height set to 1.5x13
+                                      letterSpacing: 0.12 * 13, // Letter spacing set to 0.12x13
+                                      wordSpacing: 0.16 * 13, // Word spacing set to 0.16x13
+                                    ),
+                                    contentPadding: EdgeInsets.zero, // Remove default padding
+                                  ),
+                                  onChanged: (value) {
+                                    // Validate the input
+                                    String semanticLabel = "Input Desired Amount QAR"; // Default label
+                                    if (value.isEmpty) {
+                                      semanticLabel = "Input is required.";
+                                    } else if (double.tryParse(value) == null) {
+                                      semanticLabel = "Invalid input. Please enter a number.";
                                     } else {
-                                      semanticLabel = "You have entered $value QAR.";
+                                      double amount = double.parse(value);
+                                      if (amount <= 0) {
+                                        semanticLabel = "Minimum donation amount is 1 QAR.";
+                                      } else {
+                                        semanticLabel = "You have entered $value QAR.";
+                                      }
                                     }
-                                  }
-                                  // Update the semantic label dynamically
-                                  SemanticsService.announce(semanticLabel, TextDirection.ltr);
-                                },
+                                    // Update the semantic label dynamically
+                                    SemanticsService.announce(semanticLabel, TextDirection.ltr);
+                                  },
+                                ),
                               ),
                             ),
                           ),
@@ -156,7 +193,7 @@ class MyHomePage extends StatelessWidget {
                           width: 340,
                           height: 50,
                           decoration: BoxDecoration(
-                            color: Colors.purple,
+                            color: Color(0xFF5C315E),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Row(
