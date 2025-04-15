@@ -32,15 +32,6 @@ class MyApp extends StatelessWidget {
 }
 
 
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       builder: (context, child) => AccessibilityTools(child: child),
-//       home: MyHomePage(),
-//     );
-//   }
-// }
 
 
 class MyHomePage extends StatelessWidget {
@@ -57,7 +48,10 @@ class MyHomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset('assets/plantCoins.jpg'),
+                Semantics(
+                  label: 'A photo of plants and coins for the General Sadqa project',
+                  child: Image.asset('assets/plantCoins.jpg'),
+                ),              
                 SizedBox(height: 20), // Add some space between the image and the text gap
                 SizedBox(height: 220), // Gap for text to go
                 Row(
