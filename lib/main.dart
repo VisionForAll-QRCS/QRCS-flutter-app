@@ -51,6 +51,7 @@ class MyHomePage extends StatelessWidget {
                   child: Image.asset('assets/plantCoins.jpg'),
                 ),    
                 SizedBox(height: 20), // Add some space between the image and the text gap
+                
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0), // Align with buttons
                   child: Column(
@@ -119,7 +120,7 @@ class MyHomePage extends StatelessWidget {
                            Padding(
                             padding: const EdgeInsets.only(left: 20.0, right: 0.0, top: 4.0, bottom: 0.0),
                             child: Stack(
-                              //alignment: Alignment.center,
+                              alignment: Alignment.center,
                               children: [
                                 CircularPercentIndicator(
                                   radius: 40.0,
@@ -168,410 +169,447 @@ class MyHomePage extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                              ],
+                              ], //children
                             ),
                           ),
-
-                            Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 8.0, bottom: 8.0),
-                                child: Text.rich(
-                                  TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: "Fundraising progress:\n", // First line
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 14,
-                                          fontFamily: 'InriaSans',
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 8.0, bottom: 8.0),
+                              child: Text.rich(
+                                TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: "Fundraising progress:\n", // First line
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                        fontFamily: 'Sans Serif',
+                                        fontWeight: FontWeight.bold,
                                       ),
-                                      TextSpan(
-                                        text: "87.33% of the goal reached\n", // Second line
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 14,
-                                          fontFamily: 'InriaSans',
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                    ),
+                                    TextSpan(
+                                      text: "87.33% of the goal reached\n", // Second line
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                        fontFamily: 'Sans Serif',
+                                        fontWeight: FontWeight.bold,
                                       ),
-                                      TextSpan(
-                                        text: "12.67% Remaining", // Third line
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                    ),
+                                    TextSpan(
+                                      text: "12.67% Remaining", // Third line
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold,
                                       ),
-                                    ],
-                                  ),
-                                  textAlign: TextAlign.left, // Align text to the left
-                                  maxLines: 3, // Ensure it fits in 3 lines
-                                  overflow: TextOverflow.ellipsis, // Handle overflow gracefully
+                                    ),
+                                  ], //children
                                 ),
+                                textAlign: TextAlign.left, // Align text to the left
+                                maxLines: 3, // Ensure it fits in 3 lines
+                                overflow: TextOverflow.ellipsis, // Handle overflow gracefully
+                              ),
+                            ),
+                          ),
+                        ], //children
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20), 
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Semantics(
+                    label: 'This project will be expiring in 784 days',
+                    child: Container(
+                      width: 70,
+                      height: 77,
+                      decoration: BoxDecoration(
+                        color: Color(0xFFA03123),
+                        borderRadius: BorderRadius.circular(10), // Curved edges
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(6.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Semantics(
+                              label: 'Calendar Icon', // Add a meaningful label
+                              child: Image.asset(
+                                'assets/icon-1.png', // Path to your image
+                                width: 30, // Adjust the width of the image
+                                height: 25, // Adjust the height of the image
+                              ),
+                            ),
+                            Spacer(),
+                            Text(
+                              'Expiring',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Sans Serif',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 13,
+                              ),
+                            ),
+                            Text(
+                              '784 days',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Sans Serif',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ),
+                  ),
+                  SizedBox(width: 15), // Add some space between the buttons                    
+                  Semantics(
+                    label: 'This project has 70,000 beneficiaries',
+                    child: Container(
+                      width: 105,
+                      height: 77,
+                      decoration: BoxDecoration(
+                        color: Color(0xFFA03123),
+                        borderRadius: BorderRadius.circular(10), // Curved edges
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(6.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Semantics(
+                              label: 'Profile Icon', // Add a meaningful label
+                              child: Image.asset(
+                                'assets/icon-2.png', // Path to your image
+                                width: 30, // Adjust the width of the image
+                                height: 25, // Adjust the height of the image
+                              ),
+                            ),
+                            Spacer(),
+                            Text(
+                              'Beneficiaries',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Sans Serif',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 13,
+                              ),
+                            ),
+                            Text(
+                              '70,000',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Sans Serif',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
                               ),
                             ),
                           ], //children
                         ),
-                      ),
+                      )
                     ),
                   ),
-                ),   
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Semantics(
-                  label: 'This project will be expiring in 784 days',
-                  child: Container(
-                    width: 70,
-                    height: 77,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFA03123),
-                      borderRadius: BorderRadius.circular(10), // Curved edges
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            'assets/icon-1.png', // Path to your image
-                            width: 30, // Adjust the width of the image
-                            height: 25, // Adjust the height of the image
-                          ),
-                          Spacer(),
-                          Text(
-                            'Expiring',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Sans Serif',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 13,
-                            ),
-                          ),
-                          Text(
-                            '784 days',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Sans Serif',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
+                  SizedBox(width: 15), // Add some space between the buttons
+                  Semantics(
+                    label: 'This project has a goal of 7,000,000 QAR and has raised 6,112,811 QAR',
+                    child: Container(
+                      width: 145,
+                      height: 77,
+                      decoration: BoxDecoration(
+                        color: Color(0xFFA03123),
+                        borderRadius: BorderRadius.circular(10), // Curved edges
                       ),
-                    )
-                  ),
-                ),
-                SizedBox(width: 15), // Add some space between the buttons                    
-                Semantics(
-                  label: 'This project has 70,000 beneficiaries',
-                  child: Container(
-                    width: 105,
-                    height: 77,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFA03123),
-                      borderRadius: BorderRadius.circular(10), // Curved edges
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            'assets/icon-2.png', // Path to your image
-                            width: 30, // Adjust the width of the image
-                            height: 27, // Adjust the height of the image
-                          ),
-                          Spacer(),
-                          Text(
-                            'Beneficiaries',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Sans Serif',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 13,
-                            ),
-                          ),
-                          Text(
-                            '70,000',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Sans Serif',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ),
-                ),
-                SizedBox(width: 15), // Add some space between the buttons
-                Semantics(
-                  label: 'This project has a goal of 7,000,000 QAR and has raised 6,112,811 QAR',
-                  child: Container(
-                    width: 145,
-                    height: 77,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFA03123),
-                      borderRadius: BorderRadius.circular(10), // Curved edges
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            'assets/icon-3.png', // Path to your image
-                            width: 30, // Adjust the width of the image
-                            height: 25, // Adjust the height of the image
-                          ),
-                          Spacer(),
-                          Text(
-                            'Goal   7,000,000 QAR',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Sans Serif',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12,
-                            ),
-                          ),
-                          Text(
-                            'Raised 6,112,811QAR',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Sans Serif',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ),
-                ),
-              ],
-            ),
-            //SizedBox(height: 20), // Add some space between the image and the text
-            SizedBox(height: 20), // Add some space between the row
-            Column(
-              children: [
-                Container(
-                  width: 340,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF5C315E), // Adjust color to match your design
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          "Donation Amount Default: 50 QAR",
-                          style: TextStyle(
-                            fontFamily: 'Sans Serif',
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
-                            height: 1.5,
-                            letterSpacing: 0.12 * 12,
-                            wordSpacing: 0.16 * 12,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Semantics(
-                        label: 'Donation Amount input field. Default is 50 QAR. Enter desired amount in QAR.',
-                        textField: true,
-                        excludeSemantics: true, // ensures your label overrides the built-in one
-                        child: Container(
-                          width: 180, // Adjust width as needed
-                          height: 52, // Ensure minimum height of 48 pixels
-                          padding: EdgeInsets.zero, // Remove extra padding
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Center( // Ensures the TextField is vertically centered
-                            child: TextField(
-                              controller: _controller,
-                              keyboardType: TextInputType.number,
-                              style: TextStyle(
-                                color: Colors.white70,
-                                fontSize: 19,
-                                height: 1.5, // Line height set to 1.5x13
-                                letterSpacing: 0.12 * 13, // Letter spacing set to 0.12x13
-                                wordSpacing: 0.16 * 13, // Word spacing set to 0.16x13
+                      child: Padding(
+                        padding: const EdgeInsets.all(6.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center, // Center the texts vertically
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Semantics(
+                              label: 'Bag Icon', // Add a meaningful label
+                              child: Image.asset(
+                                'assets/icon-3.png', // Path to your image
+                                width: 30, // Adjust the width of the image
+                                height: 25, // Adjust the height of the image
                               ),
-                              textAlign: TextAlign.center,
-                              textAlignVertical: TextAlignVertical.center,
-                              maxLines: 2,
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: "Input Desired Amount QAR", // Keep the hint text for guidance
-                                hintStyle: TextStyle(
+                            ),
+                            Spacer(),
+                            Text(
+                              'Goal   7,000,000 QAR',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Sans Serif',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                            Text(
+                              'Raised 6,112,811QAR',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Sans Serif',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20), // Add some space between the image and the text // Add some space between the row
+              Column(
+                children: [
+                  Container(
+                    width: 340,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF5C315E), // Adjust color to match your design
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            "Donation Amount Default: 50 QAR",
+                            style: TextStyle(
+                              fontFamily: 'Sans Serif',
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              height: 1.5,
+                              letterSpacing: 0.12 * 12,
+                              wordSpacing: 0.16 * 12,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Semantics(
+                          label: 'Donation Amount input field. Default is 50 QAR. Enter desired amount in QAR.',
+                          textField: true,
+                          excludeSemantics: true, // ensures your label overrides the built-in one
+                          child: Container(
+                            width: 180, // Adjust width as needed
+                            height: 52, // Ensure minimum height of 48 pixels
+                            padding: EdgeInsets.zero, // Remove extra padding
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Center( // Ensures the TextField is vertically centered
+                              child: TextField(
+                                controller: _controller,
+                                keyboardType: TextInputType.number,
+                                style: TextStyle(
                                   color: Colors.white70,
-                                  fontSize: 13,
+                                  fontSize: 19,
                                   height: 1.5, // Line height set to 1.5x13
                                   letterSpacing: 0.12 * 13, // Letter spacing set to 0.12x13
                                   wordSpacing: 0.16 * 13, // Word spacing set to 0.16x13
                                 ),
-                                contentPadding: EdgeInsets.zero, // Remove default padding
-                              ),
-                              onChanged: (value) {
-                                // Validate the input
-                                String semanticLabel = "Input Desired Amount QAR"; // Default label
-                                if (value.isEmpty) {
-                                  semanticLabel = "Input is required.";
-                                } else if (double.tryParse(value) == null) {
-                                  semanticLabel = "Invalid input. Please enter a number.";
-                                } else {
-                                  double amount = double.parse(value);
-                                  if (amount <= 0) {
-                                    semanticLabel = "Minimum donation amount is 1 QAR.";
+                                textAlign: TextAlign.center,
+                                textAlignVertical: TextAlignVertical.center,
+                                maxLines: 2,
+                                decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  hintText: "Input Desired Amount QAR", // Keep the hint text for guidance
+                                  hintStyle: TextStyle(
+                                    color: Colors.white70,
+                                    fontSize: 13,
+                                    height: 1.5, // Line height set to 1.5x13
+                                    letterSpacing: 0.12 * 13, // Letter spacing set to 0.12x13
+                                    wordSpacing: 0.16 * 13, // Word spacing set to 0.16x13
+                                  ),
+                                  contentPadding: EdgeInsets.zero, // Remove default padding
+                                ),
+                                onChanged: (value) {
+                                  // Validate the input
+                                  String semanticLabel = "Input Desired Amount QAR"; // Default label
+                                  if (value.isEmpty) {
+                                    semanticLabel = "Input is required.";
+                                  } else if (double.tryParse(value) == null) {
+                                    semanticLabel = "Invalid input. Please enter a number.";
                                   } else {
-                                    semanticLabel = "You have entered $value QAR.";
+                                    double amount = double.parse(value);
+                                    if (amount <= 0) {
+                                      semanticLabel = "Minimum donation amount is 1 QAR.";
+                                    } else {
+                                      semanticLabel = "You have entered $value QAR.";
+                                    }
                                   }
-                                }
-                                // Update the semantic label dynamically
-                                SemanticsService.announce(semanticLabel, TextDirection.ltr);
-                              },
+                                  // Update the semantic label dynamically
+                                  SemanticsService.announce(semanticLabel, TextDirection.ltr);
+                                },
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 20), // Add some space between the buttons
-                GestureDetector(
-                  onTap: () {
-                    // Add to cart logic here
-                  },
-                  child: Semantics(
-                    label: 'Add to cart',
-                    button: true,
-                    child: Container(
-                      width: 340,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF5C315E),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Add to Cart",
-                            style: TextStyle(
-                              fontFamily: 'Sans Serif',
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              height: 1.5,
-                              letterSpacing: 1.92,
-                              wordSpacing: 2.56,
-                            ),
-                          ),
-                          SizedBox(width: 80),
-                          Icon(
-                            Icons.shopping_cart,
-                            color: Colors.white,
-                            size: 26,
-                          ),
-                        ],
-                      ),
+                      ],
                     ),
                   ),
-                )
-              ],
-            ),
-          ], //children
-        ),
-      ),
-      Positioned(
-        top: 50,
-        right: 20,
-        child: Row(
-          children: [
-            // Shopping cart icon
-            Semantics(
-              label: 'Shopping cart',
-              button: true,
-              child: Container(
-                width: 48,
-                height: 48,
-                decoration: BoxDecoration(
-                  color: Colors.grey, // Grey circular background
-                  shape: BoxShape.circle,
-                ),
-                child: IconButton(
-                  icon: Icon(Icons.shopping_cart, size: 35, color: Colors.black), // IconButton inside the circle
-                  tooltip: 'Shopping cart', // Tooltip for accessibility
-                  onPressed: () {
-                    // Add shopping cart logic here
-                  },
-                ),
+                  SizedBox(height: 20), // Add some space between the buttons
+                  GestureDetector(
+                    onTap: () {
+                      // Add to cart logic here
+                    },
+                    child: Semantics(
+                      label: 'Add to cart',
+                      button: true,
+                      child: Container(
+                        width: 340,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: Color(0xFF5C315E),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Add to Cart",
+                              style: TextStyle(
+                                fontFamily: 'Sans Serif',
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                height: 1.5,
+                                letterSpacing: 1.92,
+                                wordSpacing: 2.56,
+                              ),
+                            ),
+                            SizedBox(width: 80),
+                            Icon(
+                              Icons.shopping_cart,
+                              color: Colors.white,
+                              size: 26,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  )
+                ],
               ),
-            ),
-            SizedBox(width: 20), // Add some space between the icons
-            // Menu icon
-            Semantics(
-              label: 'Menu',
-              button: true,
-              child: Container(
-                width: 48,
-                height: 48,
-                decoration: BoxDecoration(
-                  color: Colors.grey, // Grey circular background
-                  shape: BoxShape.circle,
-                ),
-                child: IconButton(
-                  icon: Icon(Icons.menu, size: 35, color: Colors.black), // IconButton inside the circle
-                  tooltip: 'Menu', // Tooltip for accessibility
-                  onPressed: () {
-                    // Add menu logic here
-                  },
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-            // Back icon
-      Positioned(
-        top: 50,
-        left: 20,
-        child: Semantics(
-          label: 'Back button',
-          button: true,
-          child: Container(
-            width: 48,
-            height: 48,
-            decoration: BoxDecoration(
-              color: Colors.grey, // Grey circular background
-              shape: BoxShape.circle,
-            ),
-            child: IconButton(
-              icon: Icon(Icons.arrow_back, size: 35, color: Colors.black), // IconButton inside the circle
-              tooltip: 'Back button', // Tooltip for accessibility
-              onPressed: () {
-                // Add back button logic here
-              },
-            ),
+            ], //children
           ),
         ),
+        Positioned(
+          top: 225, // Adjust the vertical position
+          right: 20,
+          child: Row(
+            children: [ // Adjust the horizontal position
+              Semantics(
+                label: 'Share Button',
+                button: true,
+                child: Container(
+                      width: 48,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        color: Colors.grey, // Grey circular background
+                        shape: BoxShape.circle,
+                      ),
+                child: Center(
+                  child: IconButton(
+                    icon: Icon(Icons.share, size: 30, color: Colors.black),
+                    onPressed: () {
+                      // Add share functionality here
+                    },
+                    tooltip: 'Share',
+                  ),
+                ),
+              ),
+          ),
+        ],
       ),
-    ],
-  ),
-);
-}       
+    ),
+
+        Positioned(
+          top: 50,
+          right: 20,
+          child: Row(
+            children: [
+              // Shopping cart icon
+              Semantics(
+                label: 'Shopping cart',
+                button: true,
+                child: Container(
+                  width: 48,
+                  height: 48,
+                  decoration: BoxDecoration(
+                    color: Colors.grey, // Grey circular background
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    icon: Icon(Icons.shopping_cart, size: 35, color: Colors.black), // IconButton inside the circle
+                    tooltip: 'Shopping cart', // Tooltip for accessibility
+                    onPressed: () {
+                      // Add shopping cart logic here
+                    },
+                  ),
+                ),
+              ),
+              SizedBox(width: 20), // Add some space between the icons
+              // Menu icon
+              Semantics(
+                label: 'Menu',
+                button: true,
+                child: Container(
+                  width: 48,
+                  height: 48,
+                  decoration: BoxDecoration(
+                    color: Colors.grey, // Grey circular background
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    icon: Icon(Icons.menu, size: 35, color: Colors.black), // IconButton inside the circle
+                    tooltip: 'Menu', // Tooltip for accessibility
+                    onPressed: () {
+                      // Add menu logic here
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+          Positioned(
+            top: 50,  // Back icon
+            left: 20,
+            child: Semantics(
+              label: 'Back button',
+              button: true,
+              child: Container(
+                width: 48,
+                height: 48,
+                decoration: BoxDecoration(
+                  color: Colors.grey, // Grey circular background
+                  shape: BoxShape.circle,
+                ),
+                child: IconButton(
+                  icon: Icon(Icons.arrow_back, size: 35, color: Colors.black), // IconButton inside the circle
+                  tooltip: 'Back button', // Tooltip for accessibility
+                  onPressed: () {
+                    // Add back button logic here
+                  },
+                ),
+              ),
+            ),
+          ),
+        ], //children
+      ),
+    );
+  }    //build   
 }
