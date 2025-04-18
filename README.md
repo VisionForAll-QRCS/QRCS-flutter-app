@@ -16,12 +16,19 @@ This repository contains the final deliverables for the Qatar Red Crescent Socie
 
 ## Repository Structure
 QRCS_Accessibility_Prototype main files:
+
 lib/ | assets/ │ pubspec.yaml │ README.md (this file)
+
 Essential Documents Located Under Folder docs/
+
 wireframes/ 
+
 testing/
+
 sprint_reports/ 
+
 training/ 
+
 handover_manual/ 
 
 ---
@@ -39,30 +46,37 @@ handover_manual/
 ### Setup Steps
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/VisionForAll-QRCS/QRCS-flutter-app.git
+```bash
+   git clone https://github.com/VisionForAll-QRCS/QRCS-flutter-app.git 
+```
 
-Navigate into the prototype folder:
-   cd prototype_app
+2. Navigate into the prototype folder:
+```bash
+   cd QRCS_flutter_app
+```
 
-Install dependencies:
+3. Install dependencies:
+```bash
    flutter pub get
+```
 
-Run on iOS simulator:
+4. Run on iOS simulator:
+```bash
    flutter run
-VoiceOver Testing
+```
+### VoiceOver Testing
 
 To simulate the experience for visually impaired users:
 
-Enable VoiceOver in macOS or iOS Simulator
+- Enable VoiceOver when using the app on a physical device
 
-Navigate through the prototype using swipe and double-tap gestures
+- Navigate through the prototype using swipe and double-tap gestures
 
 Focus on areas like:
 - Project details
 - Add to cart and donation confirmation flow
 
-Testing Artifacts
+### Testing Artifacts
 Located in docs/testing/:
 
 handover_manual.pdf – Step-by-step testing tasks and procedures
@@ -71,7 +85,7 @@ testing_results.pdf – Summary of usability testing results
 
 signoff_form.pdf – Final validation form signed by the client
 
-Navigation Tips for QRCS Team
+### Navigation Tips for QRCS Team
 If you're viewing this repository on Google Drive or GitHub:
 
 - Need wireframes? Go to docs/Wireframes/
@@ -80,7 +94,7 @@ If you're viewing this repository on Google Drive or GitHub:
 
 - Project progress and collaboration logs? View docs/sprint_reports/
 
-Contact
+### Contact
 For any questions about this prototype or for future improvements, please reach out to the student consultants:
 
 Deema Al-Mohanadi at dmohanad@andrew.cmu.edu
