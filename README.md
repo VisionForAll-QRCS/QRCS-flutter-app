@@ -1,9 +1,10 @@
 # QRCS Accessible Donation Prototype
 
+![qrcs logo](https://github.com/user-attachments/assets/e9c8d9e0-ccce-423e-8609-4b59a990c3cb)
+
 This repository contains the final deliverables for the Qatar Red Crescent Society (QRCS) Information Systems Consulting Project (Spring 2025). The focus of this project was to improve the **accessibility of the donation experience** for visually impaired users through a Flutter-based iOS prototype, compliant with WCAG standards and compatible with iOS VoiceOver.
 
 
-![QRCS-logo](https://github.com/user-attachments/assets/cdd14052-6f96-4c4a-ba15-64498580ed82)
 ---
 
 ## Project Overview
